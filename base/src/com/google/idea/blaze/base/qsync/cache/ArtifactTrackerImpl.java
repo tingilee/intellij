@@ -667,7 +667,7 @@ public class ArtifactTrackerImpl implements ArtifactTracker {
           .filter(path -> !Files.isDirectory(path) && path.endsWith(".jar"))
           .collect(Collectors.reducing(0, e -> 1, Integer::sum));
     } catch (IOException e) {
-      logger.warn("Faled to read jar cache directory " + jarCacheDirectory);
+      logger.warn("Failed to read jar cache directory " + jarCacheDirectory);
       throw new UncheckedIOException(e);
     }
   }
