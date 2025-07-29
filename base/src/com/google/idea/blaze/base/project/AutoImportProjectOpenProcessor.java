@@ -171,7 +171,7 @@ public class AutoImportProjectOpenProcessor extends ProjectOpenProcessor {
 
     Project newProject = builder.createProject(name, projectFilePath);
     if (newProject == null) {
-      LOG.error("Failed to Bazel create project");
+      LOG.error("Failed to create Bazel project");
       return null;
     }
 
